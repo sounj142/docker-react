@@ -14,7 +14,7 @@ RUN npm run build
 
 # phase 2: create nginx image
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
 
